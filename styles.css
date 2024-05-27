@@ -33,6 +33,7 @@ nav ul li a {
 
 main {
     padding: 2em;
+    margin-bottom: 2em; /* Footer için boşluk bırak */
 }
 
 footer {
@@ -40,9 +41,8 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1em 0;
-    position: fixed;
-    bottom: 0;
     width: 100%;
+    margin-top: 2em; /* Sayfa içeriğinden biraz boşluk bırak */
 }
 
 form {
