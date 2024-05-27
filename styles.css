@@ -40,7 +40,7 @@ footer {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 0.5em 0; /* Padding'i küçültün */
+    padding: 0.2em 0; /* Padding'i küçültün */
     font-size: 0.8em; /* Yazı boyutunu küçültün */
     margin-top: 2em; /* Sayfa içeriğinden biraz boşluk bırak */
 }
