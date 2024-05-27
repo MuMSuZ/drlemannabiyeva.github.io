@@ -1,15 +1,19 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_mail import Mail, Message
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # .env dosyasını yükleyin
 
 app = Flask(__name__)
-app.secret_key = 'd9753fc8300256e944992fd584ea0f0b0cc528521ff0732f4130cb4d609edea8'  # Gizli anahtarınızı buraya koyun
+app.secret_key = os.getenv('SECRET_KEY') 
 
 # Flask-Mail ayarları
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'mumsuz@outlook.com'  # Kendi e-posta adresinizi buraya koyun
-app.config['MAIL_PASSWORD'] = '83968758Leman'   # Kendi e-posta şifrenizi buraya koyun
+app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')  # Kendi e-posta adresinizi buraya koyun
+app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')   # Kendi e-posta şifrenizi buraya koyun
 
 mail = Mail(app)
 
